@@ -78,16 +78,16 @@ def dimensionar_fio(corrente_projeto, temp, num_circuitos):
 # 3. INTERFACE DO USUÁRIO (STREAMLIT)
 # ==========================================
 
-st.title("⚡ Iron Racers - Dimensionamento de Fiação")
+st.title("Iron Racers - Dimensionamento da Bitola de Fios")
 st.markdown("Software de dimensionamento de bitolas pelo padrão **AWG** e **NBR 5410**.")
 
 # --- HELP / TUTORIAL ---
-with st.expander("❓ Ajuda e Instruções de Uso"):
+with st.expander("Ajuda e Instruções de Uso"):
     st.write("""
     **Como utilizar o sistema:**
     1. Para verificar um único fio rapidamente, utilize o menu lateral **Cálculo Unitário**.
     2. Para dimensionar o chicote completo, faça o upload de uma planilha em **Processamento em Lote**.
-    3. A planilha deve conter exatamente as colunas: `Nome do Sistema`, `Componente`, `Tensão de Operação`, `Corrente de Projeto`, `Via de Conexão`, `Temperatura de Trabalho`.
+    3. A planilha deve conter exatamente as colunas: "Nome do Sistema", "Componente", "Tensão de Operação", "Corrente de Projeto", "Via de Conexão", "Temperatura de Trabalho".
     """)
 
 # --- CÁLCULO UNITÁRIO (Barra Lateral) ---
@@ -110,7 +110,6 @@ with st.sidebar.form("form_unitario"):
 
 # --- PROCESSAMENTO EM LOTE (Tela Principal) ---
 st.header("Processamento em Lote")
-st.markdown("Faça o upload da planilha com a lista de componentes do protótipo.")
 
 colunas_obrigatorias = [
     "Nome do Sistema", "Componente", "Tensão de Operação", 
